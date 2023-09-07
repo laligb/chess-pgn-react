@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Routes, Route } from "react-router-dom";
+import { ChessProvider } from './contexts/ChessContext';
+
+import GetImageLayout from './components/GetImageLayout';
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+          <ChessProvider>
+          <Routes>
+
+            {/* <Route path="/upload" element= { <UploadImageLayout/>}/> */}
+            <Route path="/" element= { <GetImageLayout/>}/>
+          </Routes>
+          </ChessProvider>
+
+          {/* <PlayRandomMoveEngine /> */}
+
+      <footer className='footer navbar-custom'>
+          <p>Lali Bibilashvili, Amanda Aurora, David Rosillo</p>
+        </footer>
     </div>
   );
 }

@@ -1,38 +1,67 @@
 .App {
   text-align: center;
+  background-color: aliceblue;
+  /* background-color: #E3F0ED; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* App.css */
+/* .custom-chessboard {
+  margin: 20px;
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.nav-items{
+  color:white;
+}
+
+.custom-nav{
+  margin: 0;
+}
+
+.container{
+  margin: 10px;
+  min-height: 700px;
+}
+
+
+.scan-photo{
+  padding: 10px;
+  margin: 30px;
+  font-size: larger;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.scan-photo a{
+  color: green;
+}
+
+.navbar a{
+  color:  #d4dcdf;
+}
+
+.logo{
+  width:70px;
+}
+
+.navbar-custom{
+  background-color: rgb(1, 70, 64);
+  /* background-color: #0b322a; */
+  /* background-color: #0E4338; */
+}
+
+footer{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: rgb(154, 173, 178);
+}
+
+.reset{
+  color: #1c8670;
 }
