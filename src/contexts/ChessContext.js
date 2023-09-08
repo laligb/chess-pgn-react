@@ -8,7 +8,8 @@ const initialState = {
   loading : false,
   responsePGN : [],
   file: null,
-  isBoard:false
+  isBoard:false,
+  apiLoad:false
 
 }
 
@@ -30,6 +31,8 @@ function reducer(state, action){
       return initialState
     case "reset/file":
       return {...state, file:action.payload}
+    case "set/apiLoad":
+      return {...state, apiLoad:action.payload}
 
     default:
       throw new Error (`Not known action type ${action.type}`)
@@ -39,11 +42,12 @@ function reducer(state, action){
 //Pseudocomnonent = Provider!
 function ChessProvider({children}){
   const [state, dispatch] = useReducer(reducer, initialState);
-  const {imgSrc, fens,  loading, responsePGN, file, isBoard} = state; //Unpacked state
+  const {imgSrc, fens,  loading, responsePGN, file, isBoard, apiLoad} = state; //Unpacked state
   //Dispach is function which updates all these states
 
   async function OnClick() {
     console.log("Starting the OnClickEventimgSrc");
+    dispatch({type: "set/apiLoad", payload: true});
 
     try {
       const imageBlob = await (await fetch(imgSrc)).blob();
@@ -102,6 +106,7 @@ function ChessProvider({children}){
     } catch (error) {
       console.log("Error:", error.message);
     } finally {
+      dispatch({type: "set/apiLoad", payload: false});
       console.log("Finished fetch");
 
     }
@@ -121,7 +126,7 @@ function ChessProvider({children}){
   }
 
   return (
-    <chessContext.Provider value={{imgSrc, fens,  loading, responsePGN, file,isBoard, dispatch, OnClick,takePhoto, resetFile}}>
+    <chessContext.Provider value={{imgSrc, fens,  loading, responsePGN, file,isBoard, dispatch, OnClick,takePhoto, resetFile,apiLoad}}>
       {children}
     </chessContext.Provider>
   )
