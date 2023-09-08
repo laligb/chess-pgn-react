@@ -50,7 +50,7 @@ return (
                       onClick={() => OnClick()}
                       className="rounded bg-slate-300 px-4 py-2 text-black"
                     >
-                      API request
+                      🔮 DO MAGIC!
                     </button>
                     <button className="rounded bg-slate-300 px-4 py-2 text-black" onClick={resetFile}>Try again</button>
                   </div>
@@ -58,7 +58,7 @@ return (
               </>
             ) : (
               <div className="row camera flex items-center">
-                <h2>Take a Photo</h2>
+                {/* <h2>Take a Photo</h2>
                 <div>
                   <Webcam
                     height={600}
@@ -73,8 +73,8 @@ return (
                     >
                       Capture photo
                     </button>
-                  </div>
-                </div>
+                  </div> */}
+                {/* </div> */}
 
                 <div className="row flex items-center">
                   <div className="upload btn-container mt-4">

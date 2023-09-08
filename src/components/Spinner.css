@@ -1,7 +1,7 @@
 .spinner {
   border: 16px solid rgba(0, 0, 0, 0.1); /* Increased border thickness */
   border-radius: 50%;
-  border-top: 16px solid blue; /* Increased border-top thickness */
+  border-top: 16px solid #0E4338; /* Increased border-top thickness */
   width: 100px; /* Increased size */
   height: 100px; /* Increased size */
   animation: spin 1s linear infinite;
