@@ -89,8 +89,9 @@ function LoadPGN({ fens }) {
 
   return (
     <div className='row d-flex justify-content-center'>
-      <div className="col-lg-6 col-md-6 col-sm-10">
 
+      {/* <div className="col-lg-6 col-md-6 col-sm-10"> */}
+      <div className="col-lg-6 col-md-6 col-sm-10">
        <div className='chessboard'>
         <Chessboard
           position={fens[moveIndex]}
@@ -131,6 +132,7 @@ function LoadPGN({ fens }) {
       <div className="col-lg-6 col-md-6 col-sm-10">
         <p>{responsePGN}</p>
         </div>
+        <div className="col-lg-2 col-md-2 col-sm-10"></div>
     </div>
   )
 }
