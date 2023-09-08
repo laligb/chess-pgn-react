@@ -23,6 +23,7 @@ function App() {
 
       <footer className='footer navbar-custom'>
           <p>Lali Bibilashvili, Amanda Aurora, David Rosillo</p>
+          <p>2023</p>
         </footer>
     </div>
   );

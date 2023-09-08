@@ -45,7 +45,7 @@ return (
                 onClick={() => OnClick()}
                 className="rounded bg-slate-300 px-4 py-2 text-black"
               >
-                API request
+                RECOGNIZE GAME
               </button>
 
               <button className="rounded bg-slate-300 px-4 py-2 text-black" onClick={resetFile}>Try again</button>
@@ -53,24 +53,25 @@ return (
             </div>
           </>
         ) : (
-          <div className="row camera flex items-center">
-            <h2>Take a Photo</h2>
-            <div>
-              <Webcam
-                height={600}
-                width={600}
-                ref={webcamRef}
-                screenshotFormat="image/png"
-              />
-              <div className="btn-container mt-4">
-                <button
-                  onClick={() => takePhoto({ webcamRef })}
-                  className="rounded bg-slate-300 px-4 py-2 text-black"
-                >
-                  Capture photo
-                </button>
-              </div>
-            </div>
+
+          // <div className="row camera flex items-center">
+          //   <h2>Take a Photo</h2>
+          //   <div>
+          //     <Webcam
+          //       height={600}
+          //       width={600}
+          //       ref={webcamRef}
+          //       screenshotFormat="image/png"
+          //     />
+          //     <div className="btn-container mt-4">
+          //       <button
+          //         onClick={() => takePhoto({ webcamRef })}
+          //         className="rounded bg-slate-300 px-4 py-2 text-black"
+          //       >
+          //         Capture photo
+          //       </button>
+          //     </div>
+          //   </div>
 
             <div className="row flex items-center">
               <div className="upload btn-container mt-4">
@@ -85,7 +86,7 @@ return (
                 </div>
               </div>
             </div>
-          </div>
+          //</div>
         )}
       </div>
     )}
