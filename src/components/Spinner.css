@@ -1,17 +1,17 @@
-.spinner {
-  border: 16px solid rgba(0, 0, 0, 0.1); /* Increased border thickness */
-  border-radius: 50%;
-  border-top: 16px solid blue; /* Increased border-top thickness */
-  width: 100px; /* Increased size */
-  height: 100px; /* Increased size */
-  animation: spin 1s linear infinite;
-  position: fixed; /* Fixed position */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Required for exact centering */
+.chess-piece-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes spin {
+.chess-piece-spinner img {
+  width: 100px;
+  height: 100px;
+  animation: spin-chess 2s linear infinite;
+}
+
+@keyframes spin-chess {
   0% {
     transform: rotate(0deg);
   }
