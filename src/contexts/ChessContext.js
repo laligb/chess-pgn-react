@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer } from "react";
-import {Chess} from "chess.js";
+import { Chess } from 'chess.js';
 
 const chessContext = createContext();
 const initialState = {
@@ -79,11 +79,15 @@ function ChessProvider({children}){
 
 
       for (let i = 0; i < moves.length; i++) {
-        game.move(moves[i], { sloppy: true });
-        fenList.push(game.fen());
-
-
+        let validMoves = game.moves();
+        if (validMoves.includes(moves[i])) {
+          game.move(moves[i], { sloppy: true });
+          fenList.push(game.fen());
+        } else {
+          console.log(`Invalid move ${moves[i]} encountered at index ${i}`);
+        }
       }
+
 
 
 
@@ -115,12 +119,6 @@ function ChessProvider({children}){
 
 
   }
-
-
-
-
-
-
 
   return (
     <chessContext.Provider value={{imgSrc, fens,  loading, responsePGN, file,isBoard, dispatch, OnClick,takePhoto, resetFile}}>
